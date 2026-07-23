@@ -85,7 +85,7 @@ python3 disk_checker.py --mount /
 1. Mount directory
 
 ```bash
-python3 disk_checker.py --mount /media/pete/New\ Volume1
+python3 disk_checker.py --mount /mnt/hdd/disk1
 ```
 
 2. Device path
