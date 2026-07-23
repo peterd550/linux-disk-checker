@@ -711,6 +711,10 @@ def render_html(report: RunReport) -> str:
         background: linear-gradient(120deg, #cbe6d3 0%, #d9f0e2 40%, #f3f9ef 100%);
         border-bottom: 1px solid #c3d9c7;
     }
+    .report-title {
+        font-family: "Payaya", "Papyrus", "Comic Sans MS", cursive;
+        letter-spacing: 0.02em;
+    }
     main { padding: 24px; max-width: 1200px; margin: 0 auto; }
     .grid {
         display: grid;
@@ -785,7 +789,7 @@ def render_html(report: RunReport) -> str:
     </head>
     <body>
       <header>
-        <h1>Disk Checker Report (Read-Only)</h1>
+                <h1 class="report-title">Disk Checker Report (Read-Only)</h1>
         <p>Run ID: <strong>{report.run_id}</strong></p>
         <p>Status: <strong>{report.status.upper()}</strong> | Started: {report.started_at} | Ended: {report.ended_at}</p>
       </header>
@@ -885,6 +889,10 @@ def render_aggregate_html(summary: AggregateRunSummary) -> str:
                 background: linear-gradient(120deg, #cbe6d3 0%, #d9f0e2 40%, #f3f9ef 100%);
                 border-bottom: 1px solid #c3d9c7;
         }
+        .report-title {
+            font-family: "Payaya", "Papyrus", "Comic Sans MS", cursive;
+            letter-spacing: 0.02em;
+        }
         main { padding: 24px; max-width: 1200px; margin: 0 auto; }
         .card {
                 background: var(--panel);
@@ -922,7 +930,7 @@ def render_aggregate_html(summary: AggregateRunSummary) -> str:
         </head>
         <body>
             <header>
-                <h1>Disk Checker Aggregate Report (Read-Only)</h1>
+                <h1 class="report-title">Disk Checker Aggregate Report (Read-Only)</h1>
                 <p>Run ID: <strong>{summary.run_id}</strong></p>
                 <p>Status: <strong>{summary.status.upper()}</strong> | Started: {summary.started_at} | Ended: {summary.ended_at}</p>
             </header>
